@@ -2,5 +2,6 @@
 Consulta con filtro PHP
 
 Esta consulta permite mostrar los datos seleccionados y los Importa a Excel.
-![imagen](https://github.com/user-attachments/assets/85fac894-c2b9-43a0-a54c-13d7d05ad0fc)
+![imagen](https://github.com/user-attachments/assets/a8e2cfc0-1f44-429c-b5b6-b508dcb8b34e)
+
 
