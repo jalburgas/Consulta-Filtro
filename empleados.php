@@ -270,11 +270,7 @@ $sede = $_SESSION['SEDE'];
                 <th class="bav">BAV</th>                 
                 <th class="cts">CTS</th>
                 <th class="prima">PRIMA</th> 
-                <th class="devengado">DEVENGADO</th>   
-
-
-
-                <!-- Continúa con los demás campos -->
+                <th class="devengado">DEVENGADO</th>                 
             </tr>
         </thead>
         <tbody>
@@ -314,10 +310,7 @@ $sede = $_SESSION['SEDE'];
                 echo '<td class="ba">' . number_format($row['BAV'], 2, '.', ',') . '</td>';
                 echo '<td class="cts">' . number_format($row['PRIMA'], 2, '.', ',') . '</td>';
                 echo '<td class="prima">' .  number_format($row['PRIMA'], 2, '.', ',') . '</td>';
-                echo '<td class="devengado">' . number_format($row['devengado'], 2, '.', ',') . '</td>';
-
-
-                // Continúa con los demás campos
+                echo '<td class="devengado">' . number_format($row['devengado'], 2, '.', ',') . '</td>';              
                 echo '</tr>';
             }
             odbc_free_result($stmt);
