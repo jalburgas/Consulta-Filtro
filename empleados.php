@@ -161,6 +161,11 @@ $sede = $_SESSION['SEDE'];
                 <label for="condicion" class="form-check-label">CONDICION</label>
                 </div>
             </td>
+             <td><div class="form-check">
+                <input type="checkbox" value="fecha_ingreso" id="fecha_ingreso" checked onchange="toggleColumn('fecha_ingreso')">
+                <label for="fecha_egreso" class="form-check-label">FECHA INGRESO</label>
+                </div>
+            </td>
             <td><div class="form-check">
                 <input type="checkbox" value="fecha_egreso" id="fecha_egreso" checked onchange="toggleColumn('fecha_egreso')">
                 <label for="fecha_egreso" class="form-check-label">FECHA EGRESO</label>
@@ -206,7 +211,7 @@ $sede = $_SESSION['SEDE'];
             </td>
             <td><div class="form-check">
                 <input type="checkbox" value="bav" id="bav" checked onchange="toggleColumn('bav')">
-                <label for="hr_administrativa" class="form-check-label">BAV</label>
+                <label for="bav" class="form-check-label">BAV</label>
                 </div>
             </td>
             <td> <div class="form-check">
@@ -222,7 +227,7 @@ $sede = $_SESSION['SEDE'];
         </tr>
         <tr>
             <td> <div class="form-check">
-                <input type="checkbox" value="devengado" id="devengado" checked onchange="toggleColumn('hr_administrativa')">
+                <input type="checkbox" value="devengado" id="devengado" checked onchange="toggleColumn('devengado')">
                 <label for="hr_administrativa" class="form-check-label">DEVENGADO</label>
                 </div>
             </td>
@@ -258,7 +263,7 @@ $sede = $_SESSION['SEDE'];
                 <th class="categoria">CATEGORIA</th>
                 <th class="departamento">DEPARTAMENTO</th>
                 <th class="condicion">CONDICION</th>
-                <th class="fecha_ingreso">FACHA INGRESO</th>
+                <th class="fecha_ingreso">FECHA INGRESO</th>
                 <th class="fecha_egreso">FECHA EGRESO</th>
                 <th class="tipo_nomina">TIPO_NOMINA</th>
                 <th class="hr_diurna">HORAS_DIURNAS</th>
@@ -307,10 +312,10 @@ $sede = $_SESSION['SEDE'];
                 echo '<td class="sueldo">' . number_format($row['sueldo'], 2, '.', ',') . '</td>';
                 echo '<td class="bn">' . number_format($row['BN'], 2, '.', ',') . '</td>';
                 echo '<td class="bua">' . number_format($row['BUA'], 2, '.', ',') . '</td>';
-                echo '<td class="ba">' . number_format($row['BAV'], 2, '.', ',') . '</td>';
-                echo '<td class="cts">' . number_format($row['PRIMA'], 2, '.', ',') . '</td>';
+                echo '<td class="bav">' . number_format($row['BAV'], 2, '.', ',') . '</td>';
+                echo '<td class="cts">' . number_format($row['CTS'], 2, '.', ',') . '</td>';
                 echo '<td class="prima">' .  number_format($row['PRIMA'], 2, '.', ',') . '</td>';
-                echo '<td class="devengado">' . number_format($row['devengado'], 2, '.', ',') . '</td>';              
+                echo '<td class="devengado">' . number_format($row['devengado'], 2, '.', ',') . '</td>';                
                 echo '</tr>';
             }
             odbc_free_result($stmt);
@@ -398,3 +403,4 @@ $(document).ready(function() {
 
 </body>
 </html>
+
