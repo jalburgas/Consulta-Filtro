@@ -4,7 +4,7 @@ if (strtoupper(substr(PHP_OS, 0, 3)) == 'WIN') {
 } else {
     ini_set("include_path", "./..:./");
 }
-require_once ("inc.lib.conexion.php");
+require_once (conexion);
 $institucion = $_SESSION['INSTITUCION'];
 $sede = $_SESSION['SEDE'];
 ?>
